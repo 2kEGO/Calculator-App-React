@@ -49,16 +49,21 @@ body {
   flex-direction: row;
 }
 
+/* DISPLAY CONTAINER */
+
 .display-container {
   width: 100%;
   height: 10vh;
   margin-top: 10px;
-  border: 1px solid black;
   padding: 20px 20px;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .display {
@@ -71,4 +76,18 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+/* BUTTON CONTAINER */
+
+.button-container {
+  width: 100%;
+  gap: 10px;
+  height: inherit;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
 }
