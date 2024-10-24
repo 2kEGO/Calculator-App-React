@@ -1,10 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
+import CalButton from './Components/Button/CalButton.jsx'
 
 function App() {
 
   const [display, setDisplay] = useState("0");
-
 
   return (
     <>
@@ -38,7 +38,9 @@ function App() {
           <div className="display">{display}</div>
         </div>
 
-        <div className="button-container"></div>
+        <div className="button-container">
+          <CalButton />
+        </div>
       </div>
     </>
   )
