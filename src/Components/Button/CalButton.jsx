@@ -30,7 +30,7 @@ function CalButton() {
         return (
             <div className="keyboard">
                 {keys.map((item) => (
-                    <button key={item.keys} className={`key ${item.className || ''}`}>
+                    <button key={item.key} className={`key ${item.className || ''}`}>
                         {item.key}
                     </button>
                 ))}
