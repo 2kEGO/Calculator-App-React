@@ -1,10 +1,32 @@
 import './App.css';
 import React, { useState } from 'react';
+import CalButton from './Components/Button/CalButton.jsx'
 
 function App() {
 
-  const [display, setDisplay] = useState("0");
+  
+  const [display, setDisplay] = useState(0);
 
+  function handleButtonClick(event) {
+    let buttonText = event.target.innerText;
+    
+    if (buttonText === 'x'){
+      buttonText = '*';
+    }
+
+    if(buttonText === 'RESET') {
+      setDisplay("0");
+      return;
+    }
+
+    if(buttonText === '='){
+       let result = eval(display);
+      setDisplay(result.toString());
+    }
+
+  setDisplay(prevDisplay => prevDisplay === "0" ? buttonText : prevDisplay + buttonText);
+  
+  }
 
   return (
     <>
@@ -38,10 +60,15 @@ function App() {
           <div className="display">{display}</div>
         </div>
 
-        <div className="button-container"></div>
+        <div className="button-container">
+          <CalButton onClick={handleButtonClick}/>
+        </div>
       </div>
     </>
   )
 }
+
+
+
 
 export default App
