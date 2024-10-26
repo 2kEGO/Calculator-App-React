@@ -10,21 +10,35 @@ function App() {
   function handleButtonClick(event) {
     let buttonText = event.target.innerText;
     
-    if (buttonText === 'x'){
-      buttonText = '*';
+    switch (buttonText) {
+
+      case 'x':
+        buttonText = '*';
+        break;
+
+      case 'RESET':
+        setDisplay('0');
+        return;
+
+      case 'DEL':
+        const removeNumber = display.length > 1 ? display.slice(0,-1) : "0";
+        setDisplay(removeNumber);
+        return;
+
+      case '=':
+        try {
+          setDisplay(eval(display).toString());
+        } catch {
+          setDisplay('Error');
+        }
+
+        return;
+        
+      default:
+        break;
     }
 
-    if(buttonText === 'RESET') {
-      setDisplay("0");
-      return;
-    }
-
-    if(buttonText === '='){
-       let result = eval(display);
-      setDisplay(result.toString());
-    }
-
-  setDisplay(prevDisplay => prevDisplay === "0" ? buttonText : prevDisplay + buttonText);
+    setDisplay(prevDisplay => prevDisplay === '0' && prevDisplay !== '.' ?  buttonText : prevDisplay + buttonText);
   
   }
 
