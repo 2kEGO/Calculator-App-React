@@ -1,0 +1,35 @@
+.switch-button {
+    width: 5rem;
+    height: 1.5rem;
+
+    border: 1px solid black;
+    border-radius: 80px;
+    padding-left: 4px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    background-color: #252c44;
+}
+
+.switch-button span {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #cf3f2c;
+
+}
+
+.switch-button span.position-1 {
+    transform: translateX(0);
+}
+.switch-button span.position-2 {
+    transform: translateX(calc(50% - 1.25rem));
+}
+.switch-button span.position-3 {
+    transform: translateX(calc(100% - 1.5rem));
+}

@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  
   
   width: 100%;
   max-height: 10vh;
@@ -41,13 +41,34 @@ body {
 .header-items-left h3 {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 1.5;
+  
 }
 
 .header-items-right {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
+
+.header-item {
+  place-content: flex-end;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+
+
 
 /* DISPLAY CONTAINER */
 
@@ -135,5 +156,8 @@ body {
     margin: 30px auto;
     width: 95%;
     min-height: 90vh;
+  }
+  .display-container {
+    padding: 0;
   }
 }

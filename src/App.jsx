@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import CalButton from './Components/Button/CalButton.jsx'
+import Switch from './Components/Switch/Switch.jsx'
 
 function App() {
 
@@ -64,7 +65,9 @@ function App() {
                 <span>3</span>
               </div>
               
-              <div className="switch-container"></div>
+              <div className="switch-container">
+                <Switch />
+              </div>
             </div>
             
           </div>
