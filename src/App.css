@@ -11,10 +11,49 @@ a {
   text-decoration: none;
 }
 
+/* :root {
+  --body-background-color: #3b4664;
+  --display-container-color: #181f32;
+  --button-container-color:#232d44;
+  --reset-button-color: #647299;
+  --del-button-color:#647299;
+  --equal-button-color:#647299;
+  --key-color:#fefdfe;
+} */
+
+[style = 'default'] {
+  --body-background-color: #3b4664;
+  --display-container-color: #181f32;
+  --button-container-color:#232d44;
+  --reset-button-color: #647299;
+  --del-button-color:#647299;
+  --equal-button-color:#647299;
+  --key-color:#fefdfe;
+}
+[style = 'theme-2'] {
+  --body-background-color: #e6e6e6;
+  --display-container-color: #eeeeee;
+  --button-container-color:#d3cdcd;
+  --reset-button-color:#388187;
+  --del-button-color:#388187;
+  --equal-button-color:#c55403;
+  --key-color:#35352b;
+}
+[style = 'theme-3'] {
+  --body-background-color: #3b4664;
+  --display-container-color: #181f32;
+  --button-container-color:#232d44;
+  --reset-button-color:#fce343;
+  --del-button-color:#fce343;
+  --equal-button-color:#fce343;
+  --key-color:#fce343;
+}
+
+
 body {
-  background-color: #3b4664;
+  background-color: var(--body-background-color);
   font-family: "Poppins", Arial;
-  color: white;
+  color: var(--key-color);
 }
 
 .calculator-container {
@@ -86,7 +125,7 @@ body {
   border: 1px solid black;
   border-radius: 10px;
 
-  background-color: #181f32;
+  background-color: var(--display-container-color);
 }
 
 .display {
@@ -115,7 +154,7 @@ body {
   border: 1px solid black;
   border-radius: 10px;
 
-  background-color: #232d44;
+  background-color: var(--button-container-color);
   
 }
 
@@ -138,9 +177,16 @@ body {
 }
 
 .key.delete, .key.reset {
-  background-color: hsl(224, 21%, 50%);
   color: white;
   box-shadow: inset 0 -4px 0 hsl(224, 21%, 25%);
+}
+
+.key.delete {
+  background-color: var(--del-button-color);
+}
+
+.key.reset{
+  background-color: var(--reset-button-color);
 }
 
 .key.equal {
@@ -160,4 +206,9 @@ body {
   .display-container {
     padding: 0;
   }
+}
+
+/* CHANGE COLOR */
+.switch-button span.position-1{
+
 }

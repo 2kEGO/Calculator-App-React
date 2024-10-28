@@ -22,16 +22,17 @@
     border-radius: 50%;
     background-color: #cf3f2c;
 
+    transition: transform 0.3s ease-in;
 }
 
 .switch-button span.position-1 {
     transform: translateX(0);
 }
 .switch-button span.position-2 {
-    transform: translateX(calc(50% - 1.25rem));
+    transform: translateX(calc(1.5rem));
 }
 .switch-button span.position-3 {
-    transform: translateX(calc(100% - 1.5rem));
+    transform: translateX(3rem );
 }
 
 

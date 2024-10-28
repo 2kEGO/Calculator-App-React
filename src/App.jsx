@@ -5,7 +5,33 @@ import Switch from './Components/Switch/Switch.jsx'
 
 function App() {
 
+  const [theme, setTheme] = useState(1);
+  const changeTheme = () =>{
+    if (theme > 3){
+      setTheme(1);
+    }
+    else {
+      setTheme(theme + 1);
+    }
+  };
+
+  const changeThemeColor = () => {
+
+    switch (theme) {
+      case 1:
+        return 'default';
+      case 2:
+        return 'theme-2';
+      case 3:
+        return 'theme-3';
+      default:
+        return 'default';
+    }
+
+  }
   
+
+
   const [display, setDisplay] = useState(0);
 
   function handleButtonClick(event) {
@@ -43,9 +69,12 @@ function App() {
   
   }
 
+  
+  
+
   return (
     <>
-      <div className="calculator-container">
+      <div className="calculator-container" data-theme={changeThemeColor()}>
 
         <div className="header-container">
           <div className="header-items-left">
@@ -66,7 +95,7 @@ function App() {
               </div>
               
               <div className="switch-container">
-                <Switch />
+                <Switch onClick={changeTheme}/>
               </div>
             </div>
             
