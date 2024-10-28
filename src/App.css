@@ -106,9 +106,6 @@ body {
   padding: 0 10px;
 }
 
-
-
-
 /* DISPLAY CONTAINER */
 
 .display-container {
@@ -125,7 +122,10 @@ body {
   border: 1px solid black;
   border-radius: 10px;
 
+
   background-color: var(--display-container-color);
+
+
 }
 
 .display {
@@ -139,7 +139,9 @@ body {
   justify-content: flex-end;
   align-items: center;
 
+
   overflow: hidden;
+
 }
 
 /* BUTTON CONTAINER */
@@ -154,8 +156,9 @@ body {
   border: 1px solid black;
   border-radius: 10px;
 
+
   background-color: var(--button-container-color);
-  
+
 }
 
 .keyboard {
@@ -177,9 +180,13 @@ body {
 }
 
 .key.delete, .key.reset {
+
+  background-color: hsl(224, 21%, 50%);
+
   color: white;
   box-shadow: inset 0 -4px 0 hsl(224, 21%, 25%);
 }
+
 
 .key.delete {
   background-color: var(--del-button-color);
@@ -197,6 +204,7 @@ body {
 
 
 
+
 @media all and (max-width: 800px) {
   .calculator-container {
     margin: 30px auto;
@@ -209,3 +217,4 @@ body {
 }
 
 /* CHANGE COLOR */
+

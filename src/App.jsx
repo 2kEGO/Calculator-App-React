@@ -1,7 +1,9 @@
 import './App.css';
 import React, { useState } from 'react';
 import CalButton from './Components/Button/CalButton.jsx'
+
 import Switch from './Components/Switch/Switch.jsx'
+
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
       setTheme(theme + 1);
     }
   };
+
 
   const changeThemeColor = () => {
 
@@ -71,7 +74,6 @@ function App() {
 
   
   
-
   return (
     <>
       <div className="calculator-container" data-theme={changeThemeColor()}>
@@ -107,7 +109,9 @@ function App() {
         </div>
 
         <div className="button-container">
+
           <CalButton onClick={handleButtonClick}/>
+
         </div>
       </div>
     </>
