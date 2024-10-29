@@ -1,42 +1,40 @@
 import './App.css';
-import React, { useState } from 'react';
-import CalButton from './Components/Button/CalButton.jsx'
-import Switch from './Components/Switch/Switch.jsx'
+import React, { useState, useEffect } from 'react';
+import CalButton from './Components/Button/CalButton.jsx';
+import Switch from './Components/Switch/Switch.jsx';
 
 function App() {
-
+  
   const [theme, setTheme] = useState(1);
-  const changeTheme = () =>{
-    if (theme > 3){
+
+  const themeSwitch = () =>{
+    if (theme >= 3) {
       setTheme(1);
     }
     else {
       setTheme(theme + 1);
     }
-  };
-
-  const changeThemeColor = () => {
-
-    switch (theme) {
-      case 1:
-        return 'default';
-      case 2:
-        return 'theme-2';
-      case 3:
-        return 'theme-3';
-      default:
-        return 'default';
-    }
-
   }
+
+  let getTheme = (theme) => {
+    if (theme === 1){
+      return 'default';
+    }
+    else if (theme === 2){
+      return 'theme-2';
+    }
+    else {
+      return 'theme-3';
+    }
+  }
+
+
   
-
-
   const [display, setDisplay] = useState(0);
 
   function handleButtonClick(event) {
     let buttonText = event.target.innerText;
-    
+
     switch (buttonText) {
 
       case 'x':
@@ -60,22 +58,17 @@ function App() {
         }
 
         return;
-        
+
       default:
         break;
     }
 
     setDisplay(prevDisplay => prevDisplay === '0' && prevDisplay !== '.' ?  buttonText : prevDisplay + buttonText);
-  
   }
-
-  
-  
 
   return (
     <>
-      <div className="calculator-container" data-theme={changeThemeColor()}>
-
+      <div className="calculator-container" id='calculator-container' data-theme={getTheme(theme)}>
         <div className="header-container">
           <div className="header-items-left">
             <h3>calc</h3>
@@ -94,9 +87,9 @@ function App() {
                 <span>3</span>
               </div>
               
-              <div className="switch-container">
-                <Switch onClick={changeTheme}/>
-              </div>
+              
+                <Switch onClick={themeSwitch}/>
+              
             </div>
             
           </div>
