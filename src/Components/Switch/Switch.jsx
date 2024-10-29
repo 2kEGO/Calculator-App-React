@@ -2,8 +2,8 @@ import "./Switch.css";
 import React, {useState} from "react";
 
 export default function Switch({onSwitchChange}){
-    const [state, setState] = useState(1)
     
+    const [state, setState] = useState(1)
 
     const onClick = () => {
         if(state > 3 ){
@@ -17,13 +17,14 @@ export default function Switch({onSwitchChange}){
     let switchSpan;
     if (state === 1 ){
         switchSpan = 'position-1';
-        
     }
     else if (state === 2 ){
         switchSpan = 'position-2';
+        
     }
     else if (state === 3 ){
-        switchSpan = 'position-3'; 
+        switchSpan = 'position-3'
+        
     }
     
     

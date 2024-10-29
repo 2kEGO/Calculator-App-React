@@ -27,6 +27,7 @@
 
 .switch-button span.position-1 {
     transform: translateX(0);
+    
 }
 .switch-button span.position-2 {
     transform: translateX(calc(1.5rem));
