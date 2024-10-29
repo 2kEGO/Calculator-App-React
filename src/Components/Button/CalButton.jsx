@@ -1,6 +1,7 @@
 import React from "react";
 import "./button.css"
 
+
 function CalButton({onClick}) {
     const keys = [
         {key: '7', className: 'number'},
@@ -20,6 +21,7 @@ function CalButton({onClick}) {
     
         {key: '.', className: 'number'},
         {key: '0', className: 'number'},
+
         {key: '/', className: 'divide'},
         {key: 'x', className: 'multiply'},
     
@@ -30,7 +32,9 @@ function CalButton({onClick}) {
         return (
             <div className="keyboard">
                 {keys.map((item) => (
+
                     <button onClick={onClick} key={item.key} className={`key ${item.className || ''} `}>
+
                         {item.key}
                     </button>
                 ))}
