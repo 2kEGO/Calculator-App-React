@@ -22,23 +22,23 @@ a {
 }
 
 [data-theme = 'theme-2'] {
---body-background-color: #e6e6e6;
---display-container-color: #eeeeee;
---button-container-color:#d3cdcd;
---reset-button-color:#388187;
---del-button-color:#388187;
---equal-button-color:#c55403;
---key-color:#35352b;
+  --body-background-color: #e6e6e6;
+  --display-container-color: #eeeeee;
+  --button-container-color:#d3cdcd;
+  --reset-button-color:#388187;
+  --del-button-color:#388187;
+  --equal-button-color:#c55403;
+  --key-color:#35352b;
 }
 
 [data-theme = 'theme-3'] {
---body-background-color: #3b4664;
---display-container-color: #181f32;
---button-container-color:#232d44;
---reset-button-color:#fce343;
---del-button-color:#fce343;
---equal-button-color:#fce343;
---key-color:#fce343;
+  --body-background-color: #3b4664;
+  --display-container-color: #181f32;
+  --button-container-color:#232d44;
+  --reset-button-color:#fce343;
+  --del-button-color:#fce343;
+  --equal-button-color:#fce343;
+  --key-color:#fce343;
 }
 
 body {
