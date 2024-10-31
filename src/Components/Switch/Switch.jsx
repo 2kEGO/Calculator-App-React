@@ -20,6 +20,7 @@ export default function Switch({onClick = handleSwitchCount}){
     let switchSpan;
     if (state === 1 ){
         switchSpan = 'position-1';
+        
     }
     else if (state === 2 ){
         switchSpan = 'position-2';
