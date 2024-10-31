@@ -2,33 +2,12 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import CalButton from './Components/Button/CalButton.jsx';
 import Switch from './Components/Switch/Switch.jsx';
+import {handleSwitchCount} from './Components/Switch/SwitchCount.jsx';
+
 
 function App() {
+
   
-  const [theme, setTheme] = useState(1);
-
-  const themeSwitch = () =>{
-    if (theme >= 3) {
-      setTheme(1);
-    }
-    else {
-      setTheme(theme + 1);
-    }
-  }
-
-  let getTheme = (theme) => {
-    if (theme === 1){
-      return 'default';
-    }
-    else if (theme === 2){
-      return 'theme-2';
-    }
-    else {
-      return 'theme-3';
-    }
-  }
-
-
   
   const [display, setDisplay] = useState(0);
 
@@ -68,7 +47,7 @@ function App() {
 
   return (
     <>
-      <div className="calculator-container" id='calculator-container' data-theme={getTheme(theme)}>
+      <div className="calculator-container" id='calculator-container'  >
         <div className="header-container">
           <div className="header-items-left">
             <h3>calc</h3>
@@ -88,7 +67,7 @@ function App() {
               </div>
               
               
-                <Switch onClick={themeSwitch}/>
+                <Switch />
               
             </div>
             
