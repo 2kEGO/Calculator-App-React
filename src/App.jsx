@@ -1,9 +1,9 @@
 import './App.css';
+
 import React, { useState, useEffect } from 'react';
 import CalButton from './Components/Button/CalButton.jsx';
 import Switch from './Components/Switch/Switch.jsx';
 import {handleSwitchCount} from './Components/Switch/SwitchCount.jsx';
-
 
 function App() {
 
@@ -45,6 +45,7 @@ function App() {
     setDisplay(prevDisplay => prevDisplay === '0' && prevDisplay !== '.' ?  buttonText : prevDisplay + buttonText);
   }
 
+
   return (
     <>
       <div className="calculator-container" id='calculator-container'  >
@@ -79,7 +80,9 @@ function App() {
         </div>
 
         <div className="button-container">
+
           <CalButton onClick={handleButtonClick}/>
+
         </div>
       </div>
     </>
