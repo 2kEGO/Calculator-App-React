@@ -1,8 +1,12 @@
-# React + Vite
+# Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple, responsive calculator app built with React. This app allows users to perform basic mathematical operations and switch between different color themes.
 
-Currently, two official plugins are available:
+# Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Responsive Design: Scales seamlessly across various screen sizes.
+Mathematical Operations: Supports addition, subtraction, multiplication, and division.
+Theme Selection: Users can choose from multiple color themes
+
+# Credits
+This project is a Frontend Mentor challenge. For more details on the challenge, visit [Frontend Mentor](https://github.com/frontend-mentor/calculator-app-react).
