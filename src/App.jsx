@@ -7,7 +7,11 @@ import {handleSwitchCount} from './Components/Switch/SwitchCount.jsx';
 
 function App() {
 
-  
+  const [state, setState] = useState(1);
+
+  const getBackGround = state === 1? "#3b4664" : state === 2 ? "#e6e6e6" : "#3b4664";
+
+  document.body.style.backgroundColor = getBackGround;
   
   const [display, setDisplay] = useState(0);
 
@@ -47,7 +51,7 @@ function App() {
 
   return (
     <>
-      <div className="calculator-container" id='calculator-container'  >
+      <div className="calculator-container" id='calculator-container' data-theme={`theme-${state}`}>
         <div className="header-container">
           <div className="header-items-left">
             <h3>calc</h3>
@@ -67,7 +71,7 @@ function App() {
               </div>
               
               
-                <Switch />
+                <Switch state={state} setState={setState} />
               
             </div>
             
