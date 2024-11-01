@@ -2,19 +2,8 @@ import "./Switch.css";
 import React, {useState} from "react";
 import {handleSwitchCount} from "./SwitchCount.jsx"
 
-// const handleSwitchCount = (state, setState) => {
-//     if(state > 3 ){
-//         setState(1)
-//     }else {
-//         setState(state + 1)
-//     }
-    
-// }
 
-export default function Switch({onClick = handleSwitchCount}){
-    
-    const [state, setState] = useState(1)
-
+export default function Switch({onClick = handleSwitchCount, state, setState}){
     
 
     let switchSpan;
@@ -30,6 +19,7 @@ export default function Switch({onClick = handleSwitchCount}){
         switchSpan = 'position-3'
         
     }
+    console.log(switchSpan);
     
     return (
         <>
